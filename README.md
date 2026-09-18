@@ -29,24 +29,14 @@ docker compose up -d
 
 This compositions read secrets from an environment file on this folder: ```.env```.
 
-Create this file with the following format, replacing "REMOTE_COS_PASSWORD=postgres" by a reasonable value.
+Create this file with the following format, replacing variables by reasonable values.
 
 ```
-PYGEOAPI_OPENAPI_GENERATE_FAIL_ON_INVALID_COLLECTION=false
-CONTAINER_PORT=80
-HOST_URL=http://localhost
-REMOTE_COS_HOST="localhost"
-REMOTE_COS_PORT="5432"
-REMOTE_COS_DB="geodb"
-REMOTE_COS_USER="postgres"
-REMOTE_COS_PASSWORD="postgres"
-REMOTE_COS_URL=postgresql://postgres:postgres@postgis:5432/geodb
-REMOTE_CAOP_HOST="caop.host.db"
-REMOTE_CAOP_PORT="5433"
-REMOTE_CAOP_DB="dgt_local"
-REMOTE_CAOP_USER="caop_user"
-REMOTE_CAOP_PASSWORD="caop_password"
-REMOTE_CAOP_URL=postgresql://caop_user:caop_password@caop.host.db:5433/dgt_local
+GHC_MINIMAL_RUN_FREQUENCY_MINS=2
+GHC_RUNNER_IN_WEBAPP=True
+GHC_NOTIFICATIONS=True
+GHC_NOTIFICATIONS_VERBOSITY=True
+GHC_ADMIN_EMAIL='info@foo.com'
 ```
 
 For Matomo we need also:
